@@ -54,11 +54,12 @@ def save_ips(ip):
 
 def read_content(ip):
 	save_list = []
-	file_header = open(path_dir+"ips.log","r").readlines()
+	file_header = open(path_dir+"ips.log","r").read()
 	ip = ip.strip()
 	if ip in file_header:
-		print "have ip: "+ip
+		pass
 	else:
+		#print "not have ip: "+ip
 		save_ips(ip)
 def check_range_ips(range_of_ips):
 	for ip in range_of_ips:
